@@ -29,7 +29,7 @@ import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 
 export default function Contact() {
   return (
-    <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
+    <Container maxW="full" mt={0} centerContent overflow="hidden">
       <Flex>
         <Box
           bg="#02054B"
@@ -55,7 +55,7 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdPhone color="#1970F1" size="20px" />}>
-                        +91-988888888
+                        +1 (626) 757-1286
                       </Button>
                       <Button
                         size="md"
@@ -65,7 +65,7 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdEmail color="#1970F1" size="20px" />}>
-                        hello@abc.com
+                        aaronwang.eng@gmail.com
                       </Button>
                       <Button
                         size="md"
@@ -75,7 +75,7 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
-                        Karnavati, India
+                        Los Angeles, California
                       </Button>
                     </VStack>
                   </Box>

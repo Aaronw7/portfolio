@@ -1,28 +1,28 @@
 import React from 'react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import AboutMe from './AboutMe.jsx';
+import Contact from './Contact.jsx';
 
-function TabSection() {
+export default function TabSection() {
   return (
     <Tabs>
       <TabList>
-        <Tab>One</Tab>
+        <Tab>About Me</Tab>
         <Tab>Two</Tab>
-        <Tab>Three</Tab>
+        <Tab>Contact Me!</Tab>
       </TabList>
 
       <TabPanels>
         <TabPanel>
-          <p>one!</p>
+          <AboutMe />
         </TabPanel>
         <TabPanel>
           <p>two!</p>
         </TabPanel>
         <TabPanel>
-          <p>three!</p>
+          <Contact />
         </TabPanel>
       </TabPanels>
     </Tabs>
   )
 }
-
-export default TabSection;
