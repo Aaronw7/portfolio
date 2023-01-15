@@ -4,7 +4,7 @@ const port = 3000
 
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

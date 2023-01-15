@@ -1,21 +1,18 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ChakraProvider, Heading, UnorderedList, InputGroup, Input, InputRightElement, Button} from '@chakra-ui/react';
+import { ChakraProvider, Heading, Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import TabSection from './Components/TabSection.jsx';
+import Contact from './Components/Contact.jsx';
 
 function App() {
   return (
     <ChakraProvider>
       <Heading>AARON'S PORTFOLIO</Heading>
-      <Input
-        placeholder='SHOW UP?'
-      />
-      <UnorderedList></UnorderedList>
-      <InputGroup>
-        <Input/>
-        <InputRightElement>
-          <Button>Send</Button>
-        </InputRightElement>
-      </InputGroup>
+      <Box as='button' borderRadius='md' bg='tomato' color='white'>
+        SideBar!
+      </Box>
+      <TabSection />
+      <Contact />
     </ChakraProvider>
   )
 }
