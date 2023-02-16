@@ -6,7 +6,7 @@ import TabSection from './Components/TabSection.jsx';
 function App() {
   return (
     <ChakraProvider>
-      <Heading>AARON'S PORTFOLIO</Heading>
+      <Heading>AARON WANG</Heading>
       <TabSection />
     </ChakraProvider>
   )

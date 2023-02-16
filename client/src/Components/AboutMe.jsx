@@ -32,12 +32,12 @@ export default function AboutMe() {
             rounded={'md'}
             alt={'product image'}
             src={
-              'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
+              'https://i.imgur.com/3khkMf3.jpeg'
             }
             fit={'cover'}
             align={'center'}
             w={'100%'}
-            h={{ base: '100%', sm: '400px', lg: '500px' }}
+            h={'60%'}
           />
         </Flex>
         <Stack spacing={{ base: 6, md: 10 }}>
@@ -46,13 +46,13 @@ export default function AboutMe() {
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-              Automatic Watch
+              AARON WANG
             </Heading>
             <Text
               color={useColorModeValue('gray.900', 'gray.400')}
               fontWeight={300}
               fontSize={'2xl'}>
-              $350.00 USD
+              Software Developer
             </Text>
           </Box>
 
@@ -69,8 +69,7 @@ export default function AboutMe() {
                 color={useColorModeValue('gray.500', 'gray.400')}
                 fontSize={'2xl'}
                 fontWeight={'300'}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore
+                Welcome to my portfolio!
               </Text>
               <Text fontSize={'lg'}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
@@ -86,21 +85,32 @@ export default function AboutMe() {
                 fontWeight={'500'}
                 textTransform={'uppercase'}
                 mb={'4'}>
-                Features
+                Technical Skills
               </Text>
-
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                <List spacing={2}>
-                  <ListItem>Chronograph</ListItem>
-                  <ListItem>Master Chronometer Certified</ListItem>{' '}
-                  <ListItem>Tachymeter</ListItem>
-                </List>
-                <List spacing={2}>
-                  <ListItem>Anti‑magnetic</ListItem>
-                  <ListItem>Chronometer</ListItem>
-                  <ListItem>Small seconds</ListItem>
-                </List>
-              </SimpleGrid>
+              <List spacing={2}>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Front End:
+                  </Text>{' '}
+                  JavaScript, Typescript, React, Angular, HTML, CSS</ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Back End:
+                  </Text>{' '}
+                  Node.js, Express, PostgreSQL, MongoDB, MySQL, RESTful API Development</ListItem>{' '}
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Testing/Deployment:
+                  </Text>{' '}
+                  Jest, Mocha, Chai, AWS: EC2 / RDS / S3
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Developer Tools:
+                  </Text>{' '}
+                  Vim, Git, npm, Nx, Webpack, Babel, Agile Methodology, Scrum, TDD
+                </ListItem>
+              </List>
             </Box>
             <Box>
               <Text
