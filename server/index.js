@@ -9,8 +9,6 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-console.log(process.env.EMAIL_USER)
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {

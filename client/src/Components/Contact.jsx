@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Flex,
@@ -29,6 +29,48 @@ import { BsGithub, BsPerson } from 'react-icons/bs';
 import { SiLinkedin } from 'react-icons/si';
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          alert('Message sent successfully!');
+          setName('');
+          setEmail('');
+          setMessage('');
+        } else {
+          alert('Message failed to send.');
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        alert('Error sending message.');
+      });
+  };
+
   return (
     <Container maxW="full" mt={0} centerContent overflow="hidden">
       <Flex>
@@ -116,7 +158,7 @@ export default function Contact() {
                             pointerEvents="none"
                             children={<BsPerson color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input type="text" size="md" value={name} onChange={handleNameChange} autoComplete="off"/>
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
@@ -126,7 +168,7 @@ export default function Contact() {
                             pointerEvents="none"
                             children={<MdOutlineEmail color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input type="text" size="md" value={email} onChange={handleEmailChange} autoComplete="off"/>
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
@@ -137,6 +179,9 @@ export default function Contact() {
                             borderRadius: 'gray.300',
                           }}
                           placeholder="message"
+                          value={message}
+                          onChange={handleMessageChange}
+                          autoComplete="off"
                         />
                       </FormControl>
                       <FormControl id="name" float="right">
@@ -144,7 +189,8 @@ export default function Contact() {
                           variant="solid"
                           bg="#0D74FF"
                           color="white"
-                          _hover={{}}>
+                          _hover={{}}
+                          onClick={handleSubmit}>
                           Send Message
                         </Button>
                       </FormControl>
