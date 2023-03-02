@@ -21,7 +21,8 @@ import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
 import { SiLinkedin } from 'react-icons/si';
 
-export default function AboutMe() {
+export default function AboutMe({ setActiveIndex }) {
+
   return (
     <Container maxW={'7xl'}>
       <SimpleGrid
@@ -119,27 +120,46 @@ export default function AboutMe() {
                 fontWeight={'500'}
                 textTransform={'uppercase'}
                 mb={'4'}>
-                Previous Experience
+                Experience
               </Text>
 
               <List spacing={2}>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
-                    University of California, Irvine
+                    Cordoba Corporation
                   </Text>{' '}
-                  Chemical Engineering
+                  Gas Pipeline Engineer
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Schlumberger
                   </Text>{' '}
-                  Field Engineer
+                  Cement Field Engineer
+                </ListItem>
+              </List>
+            </Box>
+            <Box>
+              <Text
+                fontSize={{ base: '16px', lg: '18px' }}
+                color={useColorModeValue('blue.500', 'blue.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+                Education
+              </Text>
+
+              <List spacing={2}>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Hack Reactor
+                  </Text>{' '}
+                  Advanced Software Engineering Immersive
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
-                    Cordoba Corporation
+                    University of California, Irvine
                   </Text>{' '}
-                  Gas Pipeline Engineer
+                  B.S. Chemical Engineering
                 </ListItem>
               </List>
             </Box>
@@ -157,8 +177,10 @@ export default function AboutMe() {
             _hover={{
               transform: 'translateY(2px)',
               boxShadow: 'lg',
-            }}>
-            Add to cart
+            }}
+            onClick={() => setActiveIndex(2)}
+            >
+            Contact Me!
           </Button>
         </Stack>
       </SimpleGrid>

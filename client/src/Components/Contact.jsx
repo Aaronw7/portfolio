@@ -25,7 +25,7 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { BsGithub, BsPerson } from 'react-icons/bs';
 import { SiLinkedin } from 'react-icons/si';
 
 export default function Contact() {
@@ -44,7 +44,7 @@ export default function Contact() {
                 <Box>
                   <Heading>Contact</Heading>
                   <Text mt={{ sm: 3, md: 3, lg: 5 }} color="#DCE2FF">
-                    Fill up the form below to contact
+                    Fill up the form to contact me!
                   </Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3} alignItems="flex-start">
@@ -81,6 +81,7 @@ export default function Contact() {
                     </VStack>
                   </Box>
                   <HStack
+                    ml={12}
                     mt={{ lg: 10, md: 10 }}
                     spacing={5}
                     px={5}
@@ -100,14 +101,6 @@ export default function Contact() {
                       isRound={true}
                       _hover={{ bg: '#0D74FF' }}
                       icon={<BsGithub size="28px" />}
-                    />
-                    <IconButton
-                      aria-label="discord"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: '#0D74FF' }}
-                      icon={<BsDiscord size="28px" />}
                     />
                   </HStack>
                 </Box>
