@@ -6,9 +6,9 @@ import Contact from './Contact.jsx';
 export default function TabSection() {
   return (
     <Tabs>
-      <TabList>
+      <TabList justifyContent="flex-end">
         <Tab>About Me</Tab>
-        <Tab>Two</Tab>
+        <Tab>Projects</Tab>
         <Tab>Contact Me!</Tab>
       </TabList>
 

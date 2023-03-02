@@ -26,13 +26,14 @@ import {
   MdOutlineEmail,
 } from 'react-icons/md';
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { SiLinkedin } from 'react-icons/si';
 
 export default function Contact() {
   return (
     <Container maxW="full" mt={0} centerContent overflow="hidden">
       <Flex>
         <Box
-          bg="#02054B"
+          bg="#46464f"
           color="white"
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 10 }}
@@ -42,7 +43,7 @@ export default function Contact() {
               <WrapItem>
                 <Box>
                   <Heading>Contact</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="#DCE2FF">
                     Fill up the form below to contact
                   </Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
@@ -60,7 +61,7 @@ export default function Contact() {
                       <Button
                         size="md"
                         height="48px"
-                        width="200px"
+                        width="250px"
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
@@ -70,7 +71,7 @@ export default function Contact() {
                       <Button
                         size="md"
                         height="48px"
-                        width="200px"
+                        width="225px"
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
@@ -85,12 +86,12 @@ export default function Contact() {
                     px={5}
                     alignItems="flex-start">
                     <IconButton
-                      aria-label="facebook"
+                      aria-label="linkedin"
                       variant="ghost"
                       size="lg"
                       isRound={true}
                       _hover={{ bg: '#0D74FF' }}
-                      icon={<MdFacebook size="28px" />}
+                      icon={<SiLinkedin size="28px" />}
                     />
                     <IconButton
                       aria-label="github"

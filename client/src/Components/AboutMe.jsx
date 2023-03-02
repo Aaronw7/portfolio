@@ -19,6 +19,7 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
+import { SiLinkedin } from 'react-icons/si';
 
 export default function AboutMe() {
   return (
@@ -27,19 +28,19 @@ export default function AboutMe() {
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}>
-        <Flex>
+        <Box display="flex" justifyContent="center">
           <Image
             rounded={'md'}
-            alt={'product image'}
+            alt={'personal image'}
             src={
               'https://i.imgur.com/3khkMf3.jpeg'
             }
+            objectFit={'cover'}
             fit={'cover'}
             align={'center'}
-            w={'100%'}
-            h={'60%'}
+            h={{ base: '240px', sm: '320px', md: '400px', lg: '480px', xl: '560px' }}
           />
-        </Flex>
+        </Box>
         <Stack spacing={{ base: 6, md: 10 }}>
           <Box as={'header'}>
             <Heading
@@ -72,16 +73,15 @@ export default function AboutMe() {
                 Welcome to my portfolio!
               </Text>
               <Text fontSize={'lg'}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                maxime modi nam officiis porro, quae, quisquam quos
-                reprehenderit velit? Natus, totam.
+                I am a new Full Stack Developer coming from an engineering background in the Energy Sector.
+                It has been my dream for the past few years to enter tech and I am finally taking the leap of faith.
+                Thank you for taking the time to look around!
               </Text>
             </VStack>
             <Box>
               <Text
                 fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
+                color={useColorModeValue('blue.500', 'blue.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
                 mb={'4'}>
@@ -115,56 +115,31 @@ export default function AboutMe() {
             <Box>
               <Text
                 fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
+                color={useColorModeValue('blue.500', 'blue.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
                 mb={'4'}>
-                Product Details
+                Previous Experience
               </Text>
 
               <List spacing={2}>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
-                    Between lugs:
+                    University of California, Irvine
                   </Text>{' '}
-                  20 mm
+                  Chemical Engineering
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
-                    Bracelet:
+                    Schlumberger
                   </Text>{' '}
-                  leather strap
+                  Field Engineer
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
-                    Case:
+                    Cordoba Corporation
                   </Text>{' '}
-                  Steel
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Case diameter:
-                  </Text>{' '}
-                  42 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Dial color:
-                  </Text>{' '}
-                  Black
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Crystal:
-                  </Text>{' '}
-                  Domed, scratch‑resistant sapphire crystal with anti‑reflective
-                  treatment inside
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Water resistance:
-                  </Text>{' '}
-                  5 bar (50 metres / 167 feet){' '}
+                  Gas Pipeline Engineer
                 </ListItem>
               </List>
             </Box>
@@ -185,11 +160,6 @@ export default function AboutMe() {
             }}>
             Add to cart
           </Button>
-
-          <Stack direction="row" alignItems="center" justifyContent={'center'}>
-            <MdLocalShipping />
-            <Text>2-3 business days delivery</Text>
-          </Stack>
         </Stack>
       </SimpleGrid>
     </Container>
