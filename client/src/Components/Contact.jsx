@@ -135,6 +135,7 @@ export default function Contact() {
                       isRound={true}
                       _hover={{ bg: '#0D74FF' }}
                       icon={<SiLinkedin size="28px" />}
+                      onClick={() => window.open("https://www.linkedin.com/in/aaronwang96/")}
                     />
                     <IconButton
                       aria-label="github"
@@ -143,6 +144,7 @@ export default function Contact() {
                       isRound={true}
                       _hover={{ bg: '#0D74FF' }}
                       icon={<BsGithub size="28px" />}
+                      onClick={() => window.open("https://github.com/Aaronw7")}
                     />
                   </HStack>
                 </Box>

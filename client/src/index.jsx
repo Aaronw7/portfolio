@@ -6,7 +6,7 @@ import TabSection from './Components/TabSection.jsx';
 function App() {
   return (
     <ChakraProvider>
-      <Stack direction="row" mt={1} ml={1}>
+      <Stack direction="row" mt={1} ml={1} style={{ position: 'sticky', top: '0' }} bg="rgba(255, 255, 255, 0.9)">
         <Box
           display="flex"
           alignItems="center"
@@ -14,7 +14,7 @@ function App() {
           w="40px"
           h="40px"
           borderRadius="md"
-          bg="blue.700"
+          bg="#67b7df"
           color="white"
         >
           <Text fontWeight="bold" fontSize="lg">
