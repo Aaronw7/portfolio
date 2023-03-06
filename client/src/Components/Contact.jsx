@@ -17,6 +17,7 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  Tooltip
 } from '@chakra-ui/react';
 import {
   MdPhone,
@@ -32,6 +33,18 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [tooltipText, setTooltipText] = useState('Click to copy');
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('+1(626)757-1286');
+      setCopied(true);
+      setTooltipText('Copied!');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -90,17 +103,23 @@ export default function Contact() {
                   </Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3} alignItems="flex-start">
+                      <Tooltip hasArrow label={tooltipText} closeOnClick={false}>
+                        <Button
+                          onClick={handleCopy}
+                          size="md"
+                          height="48px"
+                          width="200px"
+                          variant="ghost"
+                          color="#DCE2FF"
+                          _hover={{ border: '2px solid #1C6FEB' }}
+                          leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                          +1 (626) 757-1286
+                        </Button>
+                      </Tooltip>
                       <Button
-                        size="md"
-                        height="48px"
-                        width="200px"
-                        variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdPhone color="#1970F1" size="20px" />}>
-                        +1 (626) 757-1286
-                      </Button>
-                      <Button
+                        onClick={() => {
+                          window.location.href = "mailto:aaronwang.eng@gmail.com";
+                        }}
                         size="md"
                         height="48px"
                         width="250px"
@@ -116,7 +135,7 @@ export default function Contact() {
                         width="225px"
                         variant="ghost"
                         color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
+                        _hover={{}}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
                         Los Angeles, California
                       </Button>
@@ -154,7 +173,7 @@ export default function Contact() {
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                       <FormControl id="name">
-                        <FormLabel>Your Name</FormLabel>
+                        <FormLabel>Name</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                           <InputLeftElement
                             pointerEvents="none"
@@ -164,7 +183,7 @@ export default function Contact() {
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
-                        <FormLabel>Mail</FormLabel>
+                        <FormLabel>Email</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                           <InputLeftElement
                             pointerEvents="none"
@@ -180,7 +199,6 @@ export default function Contact() {
                           _hover={{
                             borderRadius: 'gray.300',
                           }}
-                          placeholder="message"
                           value={message}
                           onChange={handleMessageChange}
                           autoComplete="off"

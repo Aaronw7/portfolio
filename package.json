@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Aaronw7/portfolio#readme",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.4.8",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
