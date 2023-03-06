@@ -29,7 +29,7 @@ export default function AboutMe({ setActiveIndex }) {
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}>
-        <Box display="flex" justifyContent="center">
+        <Box display='flex' justifyContent='center'>
           <Image
             rounded={'md'}
             alt={'personal image'}

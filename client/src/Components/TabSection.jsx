@@ -15,13 +15,13 @@ export default function TabSection() {
 
   return (
     <Tabs isLazy index={activeIndex} onChange={handleTabChange}>
-      <TabList ref={tabRef} justifyContent="flex-end" style={{ position: 'sticky', top: '0' }}>
+      <TabList ref={tabRef} justifyContent='flex-end' style={{ position: 'sticky', top: '0' }}>
         <Tab>About Me</Tab>
         <Tab>Projects</Tab>
-        <Tab bg="#bbdff1">Contact Me!</Tab>
+        <Tab bg='#bbdff1'>Contact Me!</Tab>
       </TabList>
 
-      <TabPanels bg="#e6f3fa">
+      <TabPanels bg='#e6f3fa'>
         <TabPanel>
           <AboutMe setActiveIndex={setActiveIndex} />
         </TabPanel>

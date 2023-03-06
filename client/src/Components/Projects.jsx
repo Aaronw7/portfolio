@@ -5,9 +5,9 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 export default function Projects() {
   return (
-    <Stack spacing="0px">
+    <Stack spacing='0px'>
       <Flex pt={10} pb={20}>
-        <Flex w="40%" justifyContent={'flex-end'}>
+        <Flex w='40%' justifyContent={'flex-end'}>
           <Box
             display='flex'
             borderRadius={'19px'}
@@ -28,15 +28,15 @@ export default function Projects() {
             />
           </Box>
         </Flex>
-        <Flex w="60%" justifyContent='center'>
-          <Flex w="60%" direction='column' alignItems='center'>
-            <Box mb="4">
-              <Heading size="xl">Chatter</Heading>
+        <Flex w='60%' justifyContent='center'>
+          <Flex w='60%' direction='column' alignItems='center'>
+            <Box mb='4'>
+              <Heading size='xl'>Chatter</Heading>
             </Box>
-            <Box mb="4">
+            <Box mb='4'>
               <Text>A real-time chat application I made on a MERN stack to reinforce my understanding of full-stack web development while exploring new technologies</Text>
             </Box>
-            <Box mb="4">
+            <Box mb='4'>
               <Heading size='md'>Technologies</Heading>
               <UnorderedList h='120px' w='300px' display='flex' flexDirection='column' flexWrap='wrap'>
                 <ListItem>ReactJS</ListItem>
@@ -53,15 +53,15 @@ export default function Projects() {
             <HStack spacing={8}>
               <Button
                 bg='#bbdff1'
-                onClick={() => window.open("https://github.com/Aaronw7/chatter")}
-                leftIcon={<BsGithub size="28px" />}
+                onClick={() => window.open('https://github.com/Aaronw7/chatter')}
+                leftIcon={<BsGithub size='28px' />}
               >
                 Github
               </Button>
               <Button
                 bg='#e8b091'
-                onClick={() => window.open("http://chatterapp.net/")}
-                rightIcon={<ExternalLinkIcon size="28px" />}
+                onClick={() => window.open('http://chatterapp.net/')}
+                rightIcon={<ExternalLinkIcon size='28px' />}
               >
                 Visit the Site
               </Button>
@@ -70,16 +70,16 @@ export default function Projects() {
         </Flex>
       </Flex>
       <Flex pt={20} pb={14} bg='#bbdff1'>
-        <Flex w="50%" justifyContent='center'>
-          <Flex w="70%" direction='column' alignItems='center'>
-            <Box mb="4">
-              <Heading size="xl">Portfolio</Heading>
+        <Flex w='50%' justifyContent='center'>
+          <Flex w='70%' direction='column' alignItems='center'>
+            <Box mb='4'>
+              <Heading size='xl'>Portfolio</Heading>
             </Box>
-            <Box mb="4">
+            <Box mb='4'>
               <Text>This portfolio website was built entirely on React and NodeJS!</Text>
               <Text>I wanted to use this space to document my progress and journey.</Text>
             </Box>
-            <Box mb="4">
+            <Box mb='4'>
               <Heading size='md'>Technologies</Heading>
               <UnorderedList>
                 <ListItem>ReactJS</ListItem>
@@ -93,15 +93,15 @@ export default function Projects() {
             <Box>
               <Button
                 bg='#91cbe8'
-                onClick={() => window.open("https://github.com/Aaronw7/chatter")}
-                leftIcon={<BsGithub size="28px" />}
+                onClick={() => window.open('https://github.com/Aaronw7/chatter')}
+                leftIcon={<BsGithub size='28px' />}
               >
                 Github
               </Button>
             </Box>
           </Flex>
         </Flex>
-        <Flex w="50%" justifyContent='center'>
+        <Flex w='50%' justifyContent='center'>
           <Box
             display='flex'
             borderWidth={'4px'}
