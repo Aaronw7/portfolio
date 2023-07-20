@@ -297,7 +297,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #7a5d85;
   border-radius: 64px;
   text-align: center;
-  padding: 50px 40px;
+  padding: 40px 30px;
   margin-top: -60px;
   margin-bottom: 20px;
 }
@@ -305,7 +305,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #94769F;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 40px 30px;
   margin-top: -60px;
   margin-bottom: 20px;
 }
@@ -324,17 +324,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  transition-timing-function: linear !important;
-}
+ }
 
 .skill-slider .item img {
-  width: 35%;
+  width: 30%;
   margin: 0 auto 15px auto;
 }
-
 /************ Projects Css ************/
 .projects {
-  padding: 80px 0;
+  padding: 20px 0 80px;
   position: relative;
   background-color: #fff;
 }
@@ -353,61 +351,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
-.projects .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
-}
-.projects .nav.nav-pills .nav-item {
-  width: 33.33333%;
-}
-.projects .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #000;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  z-index: 0;
-}
-.projects .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #4f4472 -15%, #c0687c 85%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-}
-.projects .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
-}
-.projects .nav.nav-pills .nav-link.active {
-    border: 1px solid #000;
-}
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid #000;
-  border-radius: 55px 0px 0px 55px;
-}
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid #000;
-  border-radius: 0 55px 55px 0;
-}
 .proj-imgbx {
   position: relative;
+  border: 2px solid #4f4472;
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
@@ -433,6 +379,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  color: white;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
@@ -450,19 +397,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
 
 /************ Contact Css ************/
 .contact {
   background: linear-gradient(90.21deg, #4f4472 -5.91%, #c0687c 111.58%);
-  padding: 60px 0 200px 0;
+  padding: 60px 0 80px 0;
 }
 .contact img {
   width: 92%;
