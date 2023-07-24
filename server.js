@@ -14,7 +14,7 @@ app.listen(8000, () => console.log("SERVER RUNNING"));
 
 const buildPath = path.join(__dirname, "build");
 
-app.use(express.statis(buildPath));
+app.use(express.static(buildPath));
 
 app.get("/*", function(req, res) {
   res.sendFile(
